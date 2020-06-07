@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximal-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8" />
+<meta name="author" content="Hardiansyah" />
+<title>IDMessenger</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="Style.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Barlow|Oxygen|Noto+Sans|Open+Sans|Rubik|Roboto|Cabin|Muli|Nunito&display=swap" rel="stylesheet">
+<script type="text/javascript" src="Script.js"></script>
+</head>
+
+<body>
+<div class="header" id="header">
+<i class="fa fa-reorder" onclick="bukaProfile()"></i>
+<p class="title">IDMessenger</p>
+<button class="nav" onclick="bukaNav(event, 'Pesan')" id="klik"><i class="fa fa-comments"></i> Pesan</button><button class="nav" onclick="bukaNav(event, 'Status')"><i class="fa fa-globe"></i> Status</button><button class="nav" onclick="bukaNav(event, 'Kontak')"><i class="fa fa-address-book"></i> Kontak</button>
+</div>
+ 
+<div class="konten" id="Pesan">
+<div class="chat">
+<img class="chat-foto" src=".nonmedia">
+<p class="chat-waktu">12.00</p>
+<p class="chat-nama"><!-- --></p>
+<p class="chat-isi"><!-- --></p>
+</div>
+  
+<div class="chat">
+<img class="chat-foto" src=".nonmedia">
+<p class="chat-waktu">12.00</p>
+<p class="chat-nama"><!-- --></p>
+<p class="chat-isi"><!-- --></p>
+</div>
+  
+<div class="chat">
+<img class="chat-foto" src=".nonmedia">
+<p class="chat-waktu">12.00</p>
+<p class="chat-nama"><!-- --></p>
+<p class="chat-isi"><!-- --></p>
+</div>
+  
+<div class="chat">
+<img class="chat-foto" src=".nonmedia">
+<p class="chat-waktu">12.00</p>
+<p class="chat-nama"><!-- --></p>
+<p class="chat-isi"><!-- --></p>
+</div>
+  
+<div class="chat">
+<img class="chat-foto" src=".nonmedia">
+<p class="chat-waktu">12.00</p>
+<p class="chat-nama"><!-- --></p>
+<p class="chat-isi"><!-- --></p>
+</div>
+  
+<div class="chat">
+<img class="chat-foto" src=".nonmedia">
+<p class="chat-waktu">12.00</p>
+<p class="chat-nama"><!-- --></p>
+<p class="chat-isi"><!-- --></p>
+</div>
+</div>
+ 
+<div class="konten" id="Status">
+<div class="form-status">
+<textarea type="text" class="text" placeholder="Tuliskan Sesuatu..."></textarea><button class="submit">Kirim</button>
+<hr>
+<button class="submit"><i style="font-size: 16px" class="fa fa-file-audio-o" alt="audio"></i> Audio</button> <button class="submit"><i style="font-size: 16px" class="fa fa-file-image-o" alt="foto/video"></i> Galeri</button> <button class="submit"><i style="font-size: 16px" class="fa fa-file" alt="file"></i> File</button>
+</div>
+
+<div class="status">
+<img class="status-foto" src="Foto/profile.jpg">
+<p class="status-nama">Hardiansyah</p>
+<p class="status-waktu">Baru Saja</p>
+<p class="status-isi">Friend's</p>
+<img class="status-media" src="Foto/image.jpg">
+</div>
+
+<div class="status">
+<img class="status-foto" src="Foto/profile.jpg">
+<p class="status-nama">Hardiansyah</p>
+<p class="status-waktu">Baru Saja</p>
+<p class="status-isi">Buwong Puyuh</p>
+<video class="status-media" controls="controls">
+<source src="Foto/puyuh.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+ 
+<div class="konten" id="Kontak">
+ Op
+</div>
+
+<div id="nav-profile" class="profile">
+<div class="bg-top">
+<a href="javascript:void(0)" class="tutup-profile" onclick="tutupProfile()"><i style="font-size: 18px" class="fa fa-arrow-circle-left"></i></a>
+<img class="profile-foto" src="Foto/profile.jpg">
+<p class="profile-nama">Hardiansyah<i style="font-size: 20px" class=""></i></p>
+<p class="profile-tlp">0895-2930-5947<i style="font-size: 20px" class=""></i></p>
+</div>
+
+<i class="fa fa-user-circle"></i> <p class="profile-menu">Akun Saya</p>
+<br/>
+<i class="fa fa-bullhorn"></i> <p class="profile-menu">Pengumuman</p>
+<br/>
+<i class="fa fa-gamepad"></i> <p class="profile-menu">Permainan</p>
+<br/>
+<i class="fa fa-question-circle"></i> <p class="profile-menu">Bantuan</p>
+<br/>
+<i class="fa fa-cogs"></i> <p class="profile-menu">Pengaturan & Privasi</p>
+<br/>
+<i class="fa fa-info-circle"></i> <p class="profile-menu">Tentang & Lisensi</p>
+</div>
+ 
+ 
+ 
+<script type="text/javascript">
+  var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos > currentScrollPos) {
+				document.getElementById("header").style.top = "0px";
+				document.getElementById("Pesan").style.top = "0px";
+			} else {
+				document.getElementById("header").style.top = "-50px";
+				document.getElementById("Pesan").style.top = "0px";
+			}
+				prevScrollpos = currentScrollPos;
+		}
+</script>
+ 
+<script>
+function bukaProfile() {
+  document.getElementById("nav-profile").style.width = "60%";
+}
+
+
+function tutupProfile() {
+  document.getElementById("nav-profile").style.width = "0%";
+}
+</script>
+
+ 
+<script>
+function bukaNav(evt, navigasi) {
+  var i, konten, nav;
+
+  konten = document.getElementsByClassName("konten");
+  for (i = 0; i< konten.length; i++) {
+    konten[i].style.display = "none";
+  }
+
+  nav = document.getElementsByClassName("nav");
+  for (i = 0; i< nav.length; i++) {
+    nav[i].className = nav[i].className.replace(" active", "");
+  }
+
+  document.getElementById(navigasi).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("klik").click();
+</script>
+ 
+<script type="text/javascript" src="Script.js"></script>
+</body></html>
